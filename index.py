@@ -91,7 +91,7 @@ def index():
         output.Page.Margin.Bottom = (page_margin_bottom)
 
         doc_PageCount  = request.form.get('pg_Pages', 1, type=int)
-        if (doc_PageCount > 20): doc_PageCount = 20
+        # if (doc_PageCount > 20): doc_PageCount = 20
         output.Page.Count = doc_PageCount
 
         doc_Rows  = request.form.get('doc_RowSpacing', def_doc_RowSpacing, type=float)
@@ -230,7 +230,7 @@ def index():
         
 
 def download_file(path, attachment, filename):
-    response = send_file(filename_or_fp=path, as_attachment=attachment, attachment_filename=filename, mimetype='application/pdf', cache_timeout=-1)
+    response = send_file(path_or_file=path, as_attachment=attachment, download_name=filename, mimetype='application/pdf')
     
     return response
 

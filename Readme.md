@@ -2,6 +2,8 @@
 
 A simple Python script that generates printable fidicuals used by the [Shaper Origin CNC router](https://www.shapertools.com/en-us/). This project is not affiliated with Shaper Tools.
 
+python3 -m flask --app index run
+
 ## Prerequisites
 
 ### pyDominoPDF.py
@@ -16,3 +18,4 @@ A flask web application for a web hosted version of pyDominoPDF.
 ## License
 
 This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details
+
